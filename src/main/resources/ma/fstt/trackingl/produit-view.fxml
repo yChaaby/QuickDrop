@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox prefHeight="490.0" prefWidth="710.0" spacing="8" style="-fx-background-color: linear-gradient(to bottom, #FDC654, #D79100); " xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ma.fstt.trackingl.ProduitController">
+    <stylesheets>
+        <URL value="@LivreurStyle.css" />
+    </stylesheets>
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <children>
+        <Button ellipsisString="&lt;-" mnemonicParsing="false" onAction="#onBackButtonClick" prefHeight="26.0" prefWidth="51.0" text="Back" />
+        <Label fx:id="Nom" onMouseExited="#Validation" prefHeight="18.0" prefWidth="147.0" text="Nom Produit :" textFill="WHITE" GridPane.rowIndex="1" />
+        <TextField fx:id="nom" prefHeight="43.0" prefWidth="670.0" GridPane.rowIndex="4" />
+        <Label fx:id="Prix" prefHeight="18.0" prefWidth="112.0" text="Prix :" textFill="WHITE" GridPane.rowIndex="3">
+            <font>
+                <Font name="System Bold Italic" size="13.0" />
+            </font></Label>
+        <TextField fx:id="prix" onMouseExited="#Validation" prefHeight="41.0" prefWidth="670.0" GridPane.rowIndex="2" />
+        <Label fx:id="Desc" prefHeight="18.0" prefWidth="168.0" text="Description :" textFill="WHITE" GridPane.rowIndex="3">
+            <font>
+                <Font name="System Bold Italic" size="13.0" />
+            </font></Label>
+        <TextField fx:id="desc" prefHeight="41.0" prefWidth="670.0" GridPane.rowIndex="2" />
+
+        <HBox fx:id="BtnHolder" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="26.0" prefWidth="868.0" spacing="10">
+            <Button fx:id="ok" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onSaveButtonClick" onMouseEntered="#Validation" prefHeight="26.0" prefWidth="104.0" style="-fx-background-radius: 15;" text="Save" GridPane.rowIndex="5" />
+        </HBox>
+        <TableView fx:id="mytable" prefHeight="302.0" prefWidth="344.0" GridPane.rowIndex="8">
+            <columns>
+                <TableColumn fx:id="col_id" prefWidth="100.0" resizable="false" style="-fx-alignment: center;" text="ID" />
+                <TableColumn fx:id="col_nom" prefWidth="179.0" resizable="false" style="-fx-alignment: center;" text="Nom Produit" />
+                <TableColumn fx:id="col_prix" minWidth="0.0" prefWidth="109.0" resizable="false" style="-fx-alignment: center;" text="Prix" />
+                <TableColumn fx:id="col_desc" minWidth="0.0" prefWidth="263.0" resizable="false" style="-fx-alignment: center;" text="Description" />
+            </columns>
+            <styleClass>
+                <String fx:value=".table-view" />
+                <String fx:value="column-header-background" />
+            </styleClass>
+
+        </TableView>
+    </children>
+
+
+
+
+
+</VBox>

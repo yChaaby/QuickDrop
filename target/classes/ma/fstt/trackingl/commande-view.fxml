@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox prefHeight="530.0" prefWidth="1020.0" spacing="12" style="-fx-background-color: linear-gradient(to bottom, #FDC654, #D79100); " xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ma.fstt.trackingl.CommandeController">
+    <stylesheets>
+        <URL value="@LivreurStyle.css" />
+    </stylesheets>
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <children>
+        <HBox fx:id="BtnHolder" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="26.0" prefWidth="868.0" spacing="10">
+         <children>
+              <Button ellipsisString="&lt;-" mnemonicParsing="false" onAction="#onBackButtonClick" prefHeight="27.0" prefWidth="63.0" text="Back" />
+              <Button ellipsisString="+" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onAddButtonClick" prefHeight="27.0" prefWidth="102.0" text="Ajouter" />
+         </children>
+        </HBox>
+        <TableView fx:id="mytable" prefHeight="451.0" prefWidth="723.0" GridPane.rowIndex="8">
+            <columns>
+                <TableColumn fx:id="col_id" prefWidth="68.0" resizable="false" style="-fx-alignment: center;" text="ID" />
+                <TableColumn fx:id="col_client" prefWidth="129.0" resizable="false" style="-fx-alignment: center;" text="Client" />
+                <TableColumn fx:id="col_livreur" prefWidth="135.0" resizable="false" style="-fx-alignment: center;" text="Livreur" />
+                <TableColumn fx:id="col_produit" minWidth="0.0" prefWidth="225.0" resizable="false" style="-fx-alignment: center;" text="Les Produits" />
+                <TableColumn fx:id="col_prix" prefWidth="68.0" resizable="false" style="-fx-alignment: center;" text="Prix" />
+            <TableColumn fx:id="col_date" minWidth="0.0" prefWidth="133.0" resizable="false" style="-fx-alignment: center;" text="Date Livraison" />
+            <TableColumn fx:id="col_distance" minWidth="0.0" prefWidth="117.0" resizable="false" style="-fx-alignment: center;" text="Distance" />
+            </columns>
+            <styleClass>
+                <String fx:value=".table-view" />
+                <String fx:value="column-header-background" />
+            </styleClass>
+
+        </TableView>
+    </children>
+
+
+
+
+
+</VBox>

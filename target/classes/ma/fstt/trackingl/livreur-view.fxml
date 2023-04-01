@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox prefHeight="490.0" prefWidth="710.0" spacing="12" style="-fx-background-color: linear-gradient(to bottom, #FDC654, #D79100); " xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ma.fstt.trackingl.LivreurController">
+    <stylesheets>
+        <URL value="@LivreurStyle.css" />
+    </stylesheets>
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <children>
+      <Button ellipsisString="&lt;-" mnemonicParsing="false" onAction="#onBackButtonClick" prefHeight="26.0" prefWidth="51.0" text="Back" />
+      <Label fx:id="Nom" text="Nom :" textFill="WHITE" GridPane.rowIndex="1" />
+      <TextField fx:id="nom" onMouseExited="#Validation" prefHeight="43.0" prefWidth="670.0" GridPane.rowIndex="4" />
+      <Label fx:id="Tele" prefHeight="18.0" prefWidth="112.0" text="Telephone :" textFill="WHITE" GridPane.rowIndex="3">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font></Label>
+      <TextField fx:id="tele" onMouseExited="#Validation" prefHeight="41.0" prefWidth="670.0" GridPane.rowIndex="2" />
+       <HBox fx:id="BtnHolder" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="26.0" prefWidth="868.0" spacing="10">
+           <Button fx:id="ok" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onSaveButtonClick" onMouseExited="#Validation" prefHeight="26.0" prefWidth="104.0" style="-fx-background-radius: 15;" text="Save" GridPane.rowIndex="5" />
+       </HBox>
+      <TableView fx:id="mytable" prefHeight="302.0" prefWidth="344.0" GridPane.rowIndex="8">
+            <columns>
+                <TableColumn fx:id="col_id" prefWidth="103.0" resizable="false" style="-fx-alignment: center;" text="ID" />
+                <TableColumn fx:id="col_nom" prefWidth="243.0" resizable="false" style="-fx-alignment: center;" text="Nom Complet" />
+                <TableColumn fx:id="col_tele" minWidth="0.0" prefWidth="194.0" resizable="false" style="-fx-alignment: center;" text="Telephone" />
+            </columns>
+         <styleClass>
+            <String fx:value=".table-view" />
+            <String fx:value="column-header-background" />
+         </styleClass>
+
+      </TableView>
+   </children>
+
+    
+
+
+
+</VBox>

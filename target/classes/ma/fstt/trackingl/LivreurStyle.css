@@ -1,0 +1,96 @@
+*{
+    -fx-font-family: "Futura";
+}
+.table-view {
+    -fx-background-color:#FFB928FF;
+    -fx-background-color: transparent;
+
+}
+table-view .column-header-background .filler {
+    -fx-background-color: transparent;
+
+}
+.table-view .corner {
+    -fx-background-color: transparent;
+}
+.table-view .column-header-background{
+    -fx-background-color: linear-gradient(to bottom, #FFB928FF, #FFC244FF);
+    -fx-background-radius: 7px 7px 0px 0px;
+    -fx-background-insets: 0 11px 0 0;
+    -fx-padding: 0 0 5px 0;
+}
+.table-view .column-header {
+    -fx-background-color: transparent;
+}
+.table-view .table-cell{
+    -fx-border-color: transparent;
+    -fx-padding: 2 0 2 10px;
+    -fx-text-fill:  White;
+
+}
+.table-row-cell: hover {
+    -fx-background-color: #93f9b911;
+    -fx-text-background-color: #2ABB98FF;
+    -fx-text-fill:  #2ABB98FF;
+
+}
+
+.table-row-cell: odd{
+    -fx-background-color: #FFB928FF;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em;
+}
+.table-row-cell: even{
+    -fx-background-color: #FFC244FF;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em;
+}
+.table-view .virtual-flow .scroll-bar:vertical,
+.table-view .virtual-flow .scroll-bar:vertical .track,
+.table-view .virtual-flow .scroll-bar:vertical .track-background,
+.table-view .virtual-flow .scroll-bar:horizontal,
+.table-view .virtual-flow .scroll-bar:horizontal .track,
+.table-view .virtual-flow .scroll-bar:horizontal .track-background {
+    -fx-background-color: transparent;
+}
+.table-view .virtual-flow .scroll-bar .increment-button,
+.table-view .virtual-flow .scroll-bar .decrement-button {
+    -fx-opacity: 0;
+    -fx-padding: 2;
+}
+.table-view > .virtual-flow > .scroll-bar > .decrement-button {
+    -fx-opacity: 0;
+}
+.table-view .virtual-flow .scroll-bar:vertical .thumb{
+    -fx-background-color:  linear-gradient(to bottom, #E19F17FF, #FFDE99FF);
+}
+.table-view .virtual-flow .scroll-bar:horizontal .thumb {
+    -fx-bar-policy:false;
+    -fx-background-color:  linear-gradient(to right, #1dbbdd44, #93f9b944);
+}
+
+.table-view .show-hide-columns-button {
+    -fx-background-color: red;
+    -fx-border-color: -fx-box-border;
+    -fx-border-insets: -1 -1 0 0;
+}
+
+/* cette partie concerne le "textfield" */
+.text-field {
+	-fx-background-color:  #00A082FF, #FFC244FF;
+	-fx-background-insets: 0, 0 0 1 0;
+	-fx-background-radius: 0;
+
+}
+.text-field:focused {
+	-fx-background-color:  #00A082FF, #FFC244FF;
+}
+ /* cette pertie concern "Btn"   linear-gradient(to bottom, #FDC654, #D79100) */
+ Button {
+     -fx-background-color: #00A082FF;
+     -fx-text-fill: #ffffff;
+     -fx-font-style: italic;
+     -fx-background-radius:15;
+ }
+
+

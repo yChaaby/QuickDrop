@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox prefHeight="530.0" prefWidth="763.0" spacing="12" style="-fx-background-color: linear-gradient(to bottom, #FDC654, #D79100); " xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ma.fstt.trackingl.CommandePanel">
+    <stylesheets>
+        <URL value="@LivreurStyle.css" />
+    </stylesheets>
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+    <HBox>    <Button ellipsisString="&lt;-" mnemonicParsing="false" onAction="#onBackButtonClick" prefHeight="26.0" prefWidth="51.0" text="Back" />
+      <Button fx:id="ok1" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#onAddProdButtonClick" onMouseExited="#Validation" prefHeight="27.0" prefWidth="127.0" style="-fx-background-radius: 15;" text="Autre Produit">
+         <HBox.margin>
+            <Insets left="20.0" />
+         </HBox.margin></Button>
+      <Button fx:id="ok11" layoutX="81.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#onRestClick" onMouseExited="#Validation" prefHeight="27.0" prefWidth="99.0" style="-fx-background-radius: 15;" text="Régénérer">
+         <HBox.margin>
+            <Insets left="20.0" />
+         </HBox.margin>
+      </Button>
+
+    </HBox>
+    <HBox>
+        <Label fx:id="Nom" text="Client :" textFill="WHITE" GridPane.rowIndex="1" />
+        <Label fx:id="Nom1" layoutX="10.0" layoutY="10.0" prefHeight="18.0" prefWidth="122.0" text="Date de Livraison :" textFill="WHITE">
+        <HBox.margin>
+            <Insets left="350.0" />
+        </HBox.margin>
+        </Label>
+    </HBox>
+    <HBox>
+        <TextField fx:id="client" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseExited="#Validation" prefHeight="43.0" prefWidth="297.0" promptText="Nom Client" GridPane.rowIndex="4" />
+        <DatePicker fx:id="date" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseExited="#Validation" prefHeight="43.0" prefWidth="294.0" promptText="DATE">
+        <HBox.margin>
+            <Insets left="90.0" />
+        </HBox.margin>
+        </DatePicker>
+
+    </HBox>
+    <HBox>
+        <Label fx:id="Tele" prefHeight="18.0" prefWidth="184.0" text="Nom Produit :" textFill="WHITE" GridPane.rowIndex="3">
+            <font>
+                <Font name="System Bold Italic" size="13.0" />
+            </font>
+        </Label>
+        <Label fx:id="Tele1" layoutX="10.0" layoutY="10.0" prefHeight="18.0" prefWidth="112.0" text="Quantite :" textFill="WHITE">
+            <font>
+                <Font name="System Bold Italic" size="13.0" />
+            </font>
+            <HBox.margin>
+                <Insets />
+            </HBox.margin>
+        </Label>
+    </HBox>
+    <VBox fx:id="produitsHolder" spacing="20.0">
+        <HBox fx:id="caseProduit">
+            <TextField fx:id="nom_produit" onMouseExited="#Validation" prefHeight="41.0" prefWidth="155.0" promptText="Produit" GridPane.rowIndex="2" />
+            <TextField fx:id="qte_produit" layoutX="10.0" layoutY="10.0" onMouseExited="#Validation" prefHeight="41.0" prefWidth="75.0">
+                <HBox.margin>
+                    <Insets left="30.0" />
+                </HBox.margin>
+            </TextField>
+        </HBox>
+
+    </VBox>
+
+    <HBox>
+        <Label fx:id="id_livreurlabel" layoutX="10.0" layoutY="10.0" prefHeight="18.0" prefWidth="219.0" text="Nom Livreur :" textFill="WHITE">
+        <font>
+            <Font name="System Bold Italic" size="13.0" />
+        </font>
+        <HBox.margin>
+            <Insets />
+        </HBox.margin>
+    </Label>
+      <Label layoutX="10.0" layoutY="10.0" prefHeight="18.0" prefWidth="84.0" text="Distance :" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font>
+      </Label>
+</HBox>
+    <HBox>
+        <TextField fx:id="nom_livreur" onMouseExited="#Validation" prefHeight="41.0" prefWidth="188.0" promptText="Livreur" GridPane.rowIndex="2" />
+        <TextField fx:id="distance" layoutX="10.0" layoutY="10.0" onMouseExited="#Validation" prefHeight="41.0" prefWidth="121.0" promptText="en Km">
+            <HBox.margin>
+                <Insets left="30.0" />
+            </HBox.margin>
+        </TextField>
+    </HBox>
+    <HBox fx:id="BtnHolder" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="26.0" prefWidth="868.0" spacing="10">
+        <Button fx:id="ok" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onSaveButtonClick" onMouseExited="#Validation" prefHeight="26.0" prefWidth="104.0" style="-fx-background-radius: 15;" text="Save" GridPane.rowIndex="5" />
+    </HBox>
+</VBox>
